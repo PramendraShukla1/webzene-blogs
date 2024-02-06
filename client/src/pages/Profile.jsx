@@ -162,7 +162,12 @@ fetchUserPosts()
 
           {/* right div */}
         </div>
+        
       </div>
+      <div className="bg-gray-200 p-20 pb-1 text-center lg:text-start">
+      <h1 className="lg:text-6xl text-3xl font-semibold text-gray-800 mb-10 lg:mb-0">Your Posts</h1>
+      </div>
+      
       {Array.isArray(posts) && posts.length > 0 ? (
   posts.map((post) => (
     <ProfilePosts post={post} key={post._id} />
