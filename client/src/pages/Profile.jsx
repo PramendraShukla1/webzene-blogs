@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import icon from "../assets/user3d.png";
 import logo from "../assets/logo.png";
 import { Button } from "@material-tailwind/react";
-import thought from "../assets/thought.png";
+import thought from "../assets/thought_new.png";
 import ProfilePosts from "../components/ProfilePosts";
 import { UserContext } from "../context/UserContext";
 import axios from "axios";
@@ -91,9 +91,11 @@ fetchUserPosts()
       <div className="lg:mt-28 mt-0 w-full flex justify-center items-center bg-gray-200 lg:p-20 p-5">
         <div className="h-full w-full flex lg:flex-row flex-col bg-white rounded-2xl lg:max-w-screen-2xl items-center shadow-lg">
           {/* left div */}
-          <div className=" lg:w-1/2 w-full flex justify-center items-center h-fit">
-            <img src={icon} alt="" className="w-auto h-auto lg:flex hidden" />
+         
+          <div className=" lg:w-1/2 w-full flex justify-center items-center h-fit relative">
+            <img src={icon} alt="" className="w-auto h-auto lg:flex hidden z-10" />
           </div>
+          <div className="bg-purple-200 h-[550px] w-[200px] absolute left-24 lg:flex hidden rounded-2xl shadow-2xl opacity-50"/>
           {/* left div */}
           {/* right div */}
           <div className=" bg-white p-10 lg:w-1/2 w-full rounded-2xl">

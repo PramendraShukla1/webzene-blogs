@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import icon from "../assets/register.png";
+import icon from "../assets/login.png";
 import logo from "../assets/logo.png";
 import { Button } from "@material-tailwind/react";
 import { Link, useNavigate } from "react-router-dom";
