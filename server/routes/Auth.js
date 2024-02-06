@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser")
 router.use(cookieParser())
 const jwt = require("jsonwebtoken");
-const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = "X1UJ2fyy0tYvVmt";
 
 //!Register Route
 router.post("/register", async (req, res) => {

@@ -26,6 +26,7 @@ const Navbar = () => {
     try {
       await axios.get("/api/auth/logout", { withCredentials: true });
       setUser(null);
+      navigate('/login')
     } catch (error) {
       console.log(error);
     }
@@ -68,7 +69,7 @@ const Navbar = () => {
                 Create
               </Button>
             </Link>{" "}
-            <Link to="/profile">
+            <Link to={`/profile/${user._id}`}>
               <Button
                 variant="text"
                 className="flex items-center gap-1 text-sm"
@@ -173,7 +174,7 @@ const Navbar = () => {
               </Button>
             </Link>{" "}
             <Link
-              to="/profile/:id"
+              to={`/profile/${user._id}`}
               className="border p-1 rounded-2xl border-gray-400 w-full flex items-center justify-center"
             >
               <Button

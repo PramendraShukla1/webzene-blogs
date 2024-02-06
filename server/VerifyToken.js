@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken")
-const jwtSecret = process.env.JWT_SECRET
+const jwtSecret = "X1UJ2fyy0tYvVmt"
 
 const verifyToken=(req,res,next)=>{
     const token=req.cookies.token
@@ -7,7 +7,7 @@ const verifyToken=(req,res,next)=>{
     if(!token){
         return res.status(401).json("You are not authenticated!")
     }
-    jwt.verify(token,process.env.JWT_SECRET,async (err,data)=>{
+    jwt.verify(token,jwtSecret,async (err,data)=>{
         if(err){
             return res.status(403).json("Token is not valid!")
         }
