@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User.js");
 const bcrypt = require("bcrypt");
-const cookieParser = require("cookie-parser")
-router.use(cookieParser())
+const cookieParser = require("cookie-parser");
+router.use(cookieParser());
 const jwt = require("jsonwebtoken");
 const jwtSecret = "X1UJ2fyy0tYvVmt";
 
@@ -40,7 +40,6 @@ router.post("/register", async (req, res) => {
   }
 });
 
-
 //!LOGIN ROUTE
 
 router.post("/login", async (req, res) => {
@@ -61,14 +60,13 @@ router.post("/login", async (req, res) => {
       { expiresIn: "3d" }
     );
     const { password, ...info } = user._doc;
-   
-    res.cookie("token",token, { httpOnly: true }).status(200).json(info);
+
+    res.cookie("token", token, { httpOnly: true }).status(200).json(info);
     console.log("token is: " + res.token);
   } catch (err) {
     console.log(err);
   }
 });
-
 
 //!LOGOUT ROUTE
 
