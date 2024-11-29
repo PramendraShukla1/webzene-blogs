@@ -7,9 +7,8 @@ const cors = require("cors");
 const app = express();
 const multer = require("multer");
 const path = require("path");
-const port = 4001;
-const mongoDB =
-  "mongodb+srv://shuklapramendra99:shuklapramendra99@cluster0.ibyocrv.mongodb.net/webzene";
+const port = process.env.PORT || 4001;
+const mongoDB = process.env.MONGODB_URL;
 
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
